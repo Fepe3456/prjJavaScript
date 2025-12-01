@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Devono avere lo stesso 'name'-->
+    <input type="radio" value="M" name="gender">Maschio <br>
+    <input type="radio" value="F" name="gender">Femmina <br>
+
+
+    <p id="risultato"></p>
+
+
+    <input type="checkbox">
+    <input type="range">
+    <input type="date">
+    
+    <script>
+        //forEach è un metodo che viene applicato all'insieme di valori, che sono istanza di una classe 
+        //document è un oggetto su cui chiamo querySelectorAll() 
+        //querySelectorAll() va a selezionare l'input, quindi stiamo agendo sul tag di input (che hanno come nome 'gender') 
+        //querySelector seleziona sempre il primo elemento che viene selezionato 
+                            //tag 'input' con name="gender"
+        document.querySelectorAll('input[name="gender"]').forEach(radio =>{
+            //Funzione assegnata all'evento 'change' 
+            document.addEventListener('change', function(e){
+                document.getElementById('risultato').textContent = "Hai selezionato: " + e.target.value; 
+            });
+        }); 
+        // const radioButtons = document.getElementById('gender'); //
+
+
+        //          ARRAY - FOR - PUSH / POP            //
+
+        //Come definire un array 
+        let numeri = [1, 2, 3, 4, 5]; 
+        //Stampa di tutti gli elementi 
+        console.log("\nforEach: "); 
+        numeri.forEach(n =>{
+            console.log("N: " + n); 
+        });  
+        //Stampa di un solo elemento 
+        console.log("\nElemento indice 1: " + numeri[1]); 
+
+
+        //Metodi PUSH e POP 
+        //push() --> aggiunge l'elemento in fondo all'array 
+        numeri.push(6); //aggiunge 6 in fondo all'array 
+        console.log(numeri); 
+        console.log("Lunghezza array: " + numeri.length); 
+        //pop --> rimuove l'elemento 
+        numeri.pop(); 
+        console.log(numeri); 
+        console.log("Lunghezza array: " + numeri.length); 
+
+        //Ciclo for 
+        console.log("\nfor: "); 
+        for(let i=0; i<numeri.length; i++){
+            console.log("numeri[" + i + "] = " + numeri[i]); 
+        }
+        //Con for ... of 
+        console.log("\nfor ... of: "); 
+        for(const n of numeri){
+            console.log("Elemento: " + n); 
+        }
+
+        //Ciclo while 
+        let i = 0; 
+        console.log("\nwhile: "); 
+        while(i<numeri.length){
+            console.log("numeri[" + i + "] = " + numeri[i]); 
+            i++; 
+        }
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <h1>Tic Tac Toe</h1>
+    <p>Player 1: <input type="text" id="player1" placeholder="..Name.." class="inputTextArea"> </p>
+    <p>Player 2: <input type="text" id="player2" placeholder="..Name.." class="inputTextArea"> </p>
+    <p id="turno">Turno: </p>
+    <br>
+
+    <div class="grid-container">
+        <input type="button" value="" id="1" onclick="setValore(1)" class="grid-item">
+        <input type="button" value="" id="2" onclick="setValore(2)" class="grid-item">
+        <input type="button" value="" id="3" onclick="setValore(3)" class="grid-item">
+    </div>
+    <div class="grid-container">
+        <input type="button" value="" id="4" onclick="setValore(4)" class="grid-item">
+        <input type="button" value="" id="5" onclick="setValore(5)" class="grid-item">
+        <input type="button" value="" id="6" onclick="setValore(6)" class="grid-item">
+    </div>
+    <div class="grid-container">
+        <input type="button" value="" id="7" onclick="setValore(7)" class="grid-item">
+        <input type="button" value="" id="8" onclick="setValore(8)" class="grid-item">
+        <input type="button" value="" id="9" onclick="setValore(9)" class="grid-item">
+    </div>
+    <br><br>
+
+    <input type="button" id="reset" onclick="resetGame()" value="Reset">
+
+
+    <script src="ticTacToe.js"></script>
+
+
+</body>
+
+
+</html>

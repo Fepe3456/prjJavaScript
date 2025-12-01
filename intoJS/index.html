@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Input types in html</h1>
+    <form action="" id="form">
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Enter your username">
+        <br> <br>
+        <label for="passowrd">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+
+        <br><br>
+        <button type="submit">Login</button>
+        <!-- <input type="submit" name="" id="login" value="Login"> -->
+        <!-- Submit type refresh all the time the page -->
+
+        <br><br>
+        <h1>Calculator</h1>
+        <select name="" id="">
+            <option value="sum">Sum</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="multiply">Multiply</option>
+            <option value="division">Division</option>
+        </select>
+
+        <br><br><br>
+        <div id="caratteriUsername">Numero caratteri username: </div>
+        <br>
+        <div id="caratteriPassword">Numero caratteri password: </div>
+
+    </form>
+
+    <script>
+        
+        const form = document.getElementById('form'); 
+        form.addEventListener('submit', function(event){ 
+            event.preventDefault(); //Per prevenire il refresh della pagina
+            let username = document.getElementById('username').value; 
+            let password = document.getElementById('password').value; 
+            
+            //accessing  the value of input fields 
+            console.log("Username:", username); 
+            console.log("Password:", password);
+
+            if(username==""){
+                alert("Username non inserito!"); 
+            }
+            if(password==""){
+                alert("Passowrd non inserita!"); 
+            }
+
+            let nCaratteriUsername = document.getElementById('caratteriUsername'); 
+            nCaratteriUsername.innerText = `Numero caratteri username: ${result}`;
+
+            let nCaratteriPassword = document.getElementById('caratteriUsername'); 
+            nCaratteriUsername.innerText = `Numero caratteri username: ${result}`;
+
+        }); 
+
+    </script>
+
+
+</body>
+</html>
