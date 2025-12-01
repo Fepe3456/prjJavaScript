@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrello Spesa</title>
+    <link rel="stylesheet" href="carrelloSpesa.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item" id="mela">
+            Mela <br>
+            <button class="add-btn" id="btn-mela" onclick="aggiungiProdotto('mela', 2)">Aggiungi</button>
+        </div>
+        <div class="grid-item" id="pera">
+            Pera <br>
+            <button class="add-btn" id="btn-pera" onclick="aggiungiProdotto('mela', 2)">Aggiungi</button>
+        </div>
+        <div class="grid-item" id="banana">
+            Banana <br>
+            <button class="add-btn" id="btn-banana" onclick="aggiungiProdotto('mela', 2)">Aggiungi</button>
+        </div>
+    </div>
+    <br><br><br>
+    <h3>Carrello:</h3>
+    <table id="table-carrello"></table>
+
+    <script src="carrelloSpesa.js"></script>
+</body>
+</html>
