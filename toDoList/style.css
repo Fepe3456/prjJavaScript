@@ -12,6 +12,7 @@ hr{
 
 #add-btn{
     border-radius: 8px;
+    border-color: rgb(7, 42, 95);
 }
 #add-btn:hover{
     transform: scale(1.1);
@@ -20,8 +21,13 @@ hr{
 }
 
 #task{
-    border-radius: 10px;
+    border-color: rgb(7, 42, 95);
 }
 #task:focus{
     background-color: lightblue;
+}
+
+#listaTasks li{
+    padding: 5px;
+    color: black;
 }
