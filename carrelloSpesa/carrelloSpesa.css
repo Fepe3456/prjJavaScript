@@ -1,7 +1,18 @@
+body{
+    background: #6A8999;
+    background: radial-gradient(circle, rgba(106, 137, 153, 1) 0%, rgba(73, 129, 156, 1) 35%, rgba(106, 137, 153, 1) 100%);
+    font-size: 1.2em;
+}
+
+h1{
+    text-align: center;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 15px;
+    justify-items: center;
 }
 .grid-item{
     text-align: center;
@@ -9,4 +20,27 @@
     border: solid black;
     width: 40%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A7B9B;
+}
+
+.grid-item img {
+    max-width: 100%; 
+    height: auto;
+}
+
+button{
+    background-color: lightslategray;
+}
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#table-carrello th, #table-carrello td {
+    padding-right: 10px;
+    padding-left: 10px;
 }

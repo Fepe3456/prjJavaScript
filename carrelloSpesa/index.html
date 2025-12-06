@@ -7,23 +7,31 @@
     <link rel="stylesheet" href="carrelloSpesa.css">
 </head>
 <body>
+    <h1>SUPERMERCATO</h1>
+    <h2>Prodotti: </h2>
     <div class="grid-container">
         <div class="grid-item" id="mela">
-            Mela <br>
-            <button class="add-btn" id="btn-mela" onclick="aggiungiProdotto('mela', 2)">Aggiungi</button>
+            Mela <br> 1.00 €/kg <br><br>
+            <img src="images/gala.png" alt="Mela Gala"> <br><br>
+            <button class="add-btn" id="btn-mela" onclick="aggiungiProdotto('Mela', 1)">Aggiungi</button>
         </div>
         <div class="grid-item" id="pera">
-            Pera <br>
-            <button class="add-btn" id="btn-pera" onclick="aggiungiProdotto('mela', 2)">Aggiungi</button>
+            Pera <br> 3.00 €/kg <br><br>
+            <img src="images/pera.png" alt="Mela Gala"> <br><br>
+            <button class="add-btn" id="btn-pera" onclick="aggiungiProdotto('Pera', 3)">Aggiungi</button>
         </div>
         <div class="grid-item" id="banana">
-            Banana <br>
-            <button class="add-btn" id="btn-banana" onclick="aggiungiProdotto('mela', 2)">Aggiungi</button>
+            Banana <br> 2.00 €/kg <br><br>
+            <img src="images/banana.png" alt="Mela Gala"> <br><br>
+            <button class="add-btn" id="btn-banana" onclick="aggiungiProdotto('Banana', 2)">Aggiungi</button>
         </div>
     </div>
-    <br><br><br>
-    <h3>Carrello:</h3>
+    <br>
+    <h2 id="totale-spesa">Totale spesa: 0.00€</h2>
+    <br><br>
+    <h2>Carrello:</h2>
     <table id="table-carrello"></table>
+    <br><br><br><br><br>
 
     <script src="carrelloSpesa.js"></script>
 </body>
