@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="">
+        <tr>
+            <th>Titolo</th>
+            <th>Fascia oraria</th>
+            <th>Costo</th>
+            <th>Posti massimi</th>
+            <th>Prenota</th>
+        </tr>
+        <tr>
+            <td>Visita1</td>
+            <td>10:00 - 12:00</td>
+            <td id="prezzo0">10€</td>
+            <td id="posti0"> 5 </td>
+            <td> <button id="prenota0" onclick="prenotazione(0)">PRENOTA</button> </td>
+        </tr>
+        <tr>
+            <td>Visita2</td>
+            <td>10:00 - 12:00</td>
+            <td id="prezzo0">15€</td>
+            <td id="posti1"> 5 </td>
+            <td> <button id="prenota1" onclick="prenotazione(1)">PRENOTA</button> </td>
+        </tr>
+    </table>
+
+    <h1 id="guadagno">Guadagno: 0.00€</h1>
+
+    <ul>
+        <li>Visita1: <span id="prenotazioni0">0</span> </li>
+        <li>Visita2: <span id="prenotazioni1">0</span> </li>
+    </ul>
+
+    <script>
+
+        const array = [{name: "Visita1", prezzo: 10, posti: parseInt(document.getElementById("posti0").textContent), prenotazioni: parseInt(document.getElementById("prenotazioni0").textContent)}, 
+        {name: "Visita1", prezzo: 15, posti: parseInt(document.getElementById("posti1").textContent), prenotazioni: parseInt(document.getElementById("prenotazioni1").textContent)}]; 
+        let guadagno = 0; 
+
+        function prenotazione(id){
+            if( array[id].posti > 0){
+                array[id].posti --; 
+                array[id].prenotazioni++; 
+                guadagno += array[id].prezzo; 
+                document.getElementById("posti" + id).textContent = array[id].posti; 
+                document.getElementById("prenotazioni" + id).textContent = array[id].prenotazioni; 
+                document.getElementById("guadagno").textContent = "Guadagno:" + guadagno; 
+            }
+            else{
+                document.getElementById("prenota" + id).textContent = "SOLD OUT"; 
+                document.getElementById("prenota" + id).disabled = true; 
+            }
+        }
+
+    </script>
+</body>
+</html>
