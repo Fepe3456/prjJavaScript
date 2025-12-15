@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.form button {
+  padding: 5px 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 45%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  margin: 2px;
+  padding: 4px 8px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}

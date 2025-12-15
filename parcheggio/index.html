@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Parcheggio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Gestione Parcheggio</h1>
+
+  <!-- STATISTICHE -->
+  <div class="stats">
+    <div>Posti totali: <span id="postiTotali"></span></div>
+    <div>Posti liberi: <span id="postiLiberi"></span></div>
+    <div>Posti occupati: <span id="postiOccupati"></span></div>
+    <div>Incasso: <span id="incasso"></span></div>
+  </div>
+
+  <!-- AGGIUNGI AUTO -->
+  <div class="form">
+    <input type="text" id="targa" placeholder="Targa">
+    <input type="text" id="proprietario" placeholder="Proprietario">
+    <button id="btnAggiungi">Aggiungi auto</button>
+  </div>
+
+  <!-- TABELLE -->
+  <div class="container">
+
+    <!-- INGRESSO -->
+    <div class="box">
+      <h2>Auto in ingresso</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Targa</th>
+            <th>Proprietario</th>
+            <th>Azioni</th>
+          </tr>
+        </thead>
+        <tbody id="tabellaIngresso"></tbody>
+      </table>
+    </div>
+
+    <!-- PARCHEGGIATE -->
+    <div class="box">
+      <h2>Auto parcheggiate</h2>
+      <p>Numero uscite: <span id="numeroUscite">0</span></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Targa</th>
+            <th>Proprietario</th>
+            <th>Azioni</th>
+          </tr>
+        </thead>
+        <tbody id="tabellaParcheggio"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
