@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="cognome" placeholder="Cognome">
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="conferma" placeholder="Conferma password">
+        <input type="number" id="eta" placeholder="Età">
+        <button id="invio">INVIO</button>
+    </div>
+
+    <p id="dati-conferma"></p>
+    
+
+    <script>
+
+        document.getElementById("invio").addEventListener("click", function(){
+            const nome = document.getElementById("nome").value; 
+            const cognome = document.getElementById("cognome").value; 
+            const email = document.getElementById("email").value; 
+            const password = document.getElementById("password").value; 
+            const conferma = document.getElementById("conferma").value; 
+            const eta = document.getElementById("eta").value; 
+
+            if( password.length < 8){
+                alert("Password troppo corta"); 
+            }
+            else if( password != conferma ){
+                alert("Conferma password non corretta"); 
+            }
+            else if( eta < 18 ){
+                alert("Età non adatta"); 
+            }
+            else if( !email.includes("@") ){
+                alert("Non è una mail"); 
+            }
+            else{
+                alert("OTTIMO!"); 
+                document.getElementById("dati-conferma").innerText = "Nome: " + nome + "\nCognome: " + cognome + "\nEmail: " + email + "\nEtà: " + eta; 
+            }
+        }); 
+        
+
+    </script>
+</body>
+</html>
